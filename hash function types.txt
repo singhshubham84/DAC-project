@@ -1,0 +1,60 @@
+hash function
+types
+truncation method
+352653162345 ->345
+
+folding method
+352
+653
+162
+345
+
+add these values  
+store data at result of addition  1233
+if we will get result more than table size then discard overflow bit  store data at 233
+
+
+ division method
+ 
+ data=12345
+ h(data)=data mod M     m=11
+ 121 mod M =0
+ 
+ 
+ mid square method
+ 
+ data=345345
+ h(data)=53*53=3749
+ 
+ 
+ multiplication method
+ 
+ x=0<x<1  =0.4
+ data
+ x*data
+ M table size
+ h(data)=floor(M(x*data mod 1))
+ x=0.534
+ 
+ 6789
+ M=17
+ x*data mod 1=0.326*17=5.543
+ 5
+int  folding(int n)
+ {
+ int m=n%1000;
+ n=n%1000;
+ int k=n%1000;
+ n=n%1000;
+ int l=n%1000;
+ n=n%1000;
+ int o=n%1000;
+ int key=(m+k+l+o)%1000;
+ return key;
+ }
+ 
+ int division_method(int n,int m)
+ {
+ return n % m;
+ }
+ 
